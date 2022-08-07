@@ -24,3 +24,18 @@ class Pessoa(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Professor(Pessoa):
+    TITULACOES = (
+        ('Doutorado',       'Doutorado'),
+        ('Mestrado',        'Mestrado'),
+        ('Especialização',  'Especialização'),
+        ('Graduação',       'Graduação'),
+    )
+    titulacao = models.CharField('Titulação', blank=True, max_length=100, choices=TITULACOES)
+    curso = models.ForeignKey(Curso, null=True, on_delete=models.SET_NULL)
+
+    class Meta:
+        verbose_name = 'Professor'
+        verbose_name_plural = 'Professores'
