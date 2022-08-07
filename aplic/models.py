@@ -12,3 +12,15 @@ class Curso(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Pessoa(models.Model):
+    nome = models.CharField('Nome', max_length=100)
+
+    class Meta:
+        abstract = True
+        verbose_name = 'Pessoa'
+        verbose_name_plural = 'Pessoas'
+
+    def __str__(self):
+        return self.nome
