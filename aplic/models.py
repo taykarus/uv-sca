@@ -39,3 +39,14 @@ class Professor(Pessoa):
     class Meta:
         verbose_name = 'Professor'
         verbose_name_plural = 'Professores'
+
+
+class Aluno(Pessoa):
+    matricula = models.IntegerField('Matrícula', unique=True)
+    data_nascimento = models.DateField('Data de Nascimento', blank=True, null=True, help_text='Formato DD/MM/AAAA')
+    email = models.EmailField('E-mail', blank=True, max_length=200)
+    curso = models.ForeignKey(Curso, on_delete=models.DO_NOTHING)
+
+    class Meta:
+        verbose_name = 'Aluno'
+        verbose_name_plural = 'Alunos'
