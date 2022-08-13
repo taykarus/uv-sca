@@ -50,3 +50,19 @@ class Aluno(Pessoa):
     class Meta:
         verbose_name = 'Aluno'
         verbose_name_plural = 'Alunos'
+
+
+class Disciplina(models.Model):
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    nome = models.CharField('Nome', max_length=100)
+    carga_horaria = models.IntegerField('Carga horária')
+    obrigatoria = models.BooleanField('Obrigatória', default=True)
+    ementa = models.TextField('Ementa', blank=True, max_length=500)
+    bibliografia = models.TextField('Bibliografia', blank=True, max_length=500)
+
+    class Meta:
+        verbose_name = 'Disciplina'
+        verbose_name_plural = 'Disciplinas'
+
+    def __str__(self):
+        return self.nome
