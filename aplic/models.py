@@ -66,3 +66,19 @@ class Disciplina(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Turma(models.Model):
+    ano = models.IntegerField('Ano')
+    semestre = models.IntegerField('Semestre')
+    turma = models.CharField('Turma', max_length=10)
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+    professor = models.ForeignKey(Professor, null=True, on_delete=models.SET_NULL)
+    alunos = models.ManyToManyField(Aluno)
+
+    class Meta:
+        verbose_name = 'Turma'
+        verbose_name_plural = 'Turmas'
+
+    def __str__(self):
+        return f"{self.ano} / {self.semestre} / {self.turma} / {self.disciplina}"
