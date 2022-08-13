@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Curso, Professor, Aluno
+from .models import Curso, Professor, Aluno, Disciplina
 
 
 @admin.register(Curso)
@@ -16,3 +16,8 @@ class ProfessorAdmin(admin.ModelAdmin):
 @admin.register(Aluno)
 class AlunoAdmin(admin.ModelAdmin):
     list_display = ('matricula', 'nome', 'curso')
+
+
+@admin.register(Disciplina)
+class DisciplinaAdmin(admin.ModelAdmin):
+    list_display = ('curso', 'nome', 'carga_horaria')
