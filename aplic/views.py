@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from .models import Professor
+from .models import Professor, Curso
 
 
 class IndexView(TemplateView):
@@ -8,6 +8,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['menu_active_item'] = 'nav-item-home'
+        context['cursos'] = Curso.objects.order_by('?').all()
         return context
 
 
