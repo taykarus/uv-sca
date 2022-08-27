@@ -76,7 +76,17 @@
 <script src="{% static 'js/tiny-slider.js' %}"></script>
 <script src="{% static 'js/glightbox.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
 <script type="text/javascript">
+    $(document).ready(function () {
+        const menu_active_item = $('#{{ menu_active_item }}');
+        if (menu_active_item.parents('ul.sub-menu').length) {
+            menu_active_item.addClass('active');
+            menu_active_item.parents().eq(1).find('a').addClass('active');
+        } else {
+            menu_active_item.find('a').addClass('active');
+        }
+    })
     //========= Hero Slider
     tns({
         container: '.hero-slider',
