@@ -48,6 +48,7 @@ class Professor(Pessoa):
         ('Graduação',       'Graduação'),
     )
     titulacao = models.CharField('Titulação', blank=True, max_length=100, choices=TITULACOES)
+    curriculo = models.TextField('Currículo', blank=True, null=True)
     curso = models.ForeignKey(Curso, null=True, on_delete=models.SET_NULL)
 
     class Meta:

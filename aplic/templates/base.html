@@ -82,7 +82,7 @@
         const menu_active_item = $('#{{ menu_active_item }}');
         if (menu_active_item.parents('ul.sub-menu').length) {
             menu_active_item.addClass('active');
-            menu_active_item.parents().eq(1).find('a').addClass('active');
+            menu_active_item.parents().eq(1).find('li#{{ menu_active_item }} > a').addClass('active');
         } else {
             menu_active_item.find('a').addClass('active');
         }

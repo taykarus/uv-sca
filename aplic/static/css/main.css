@@ -3620,3 +3620,349 @@ ol {
     padding-top: 0;
   }
 }
+
+/*======================================
+	Teachers CSS
+========================================*/
+.teachers {
+  background-color: #F4F7FA;
+}
+
+.teachers .section-title {
+  margin-bottom: 40px;
+}
+
+.teachers .single-team {
+  border: 1px solid #eee;
+  background-color: #fff;
+  margin-top: 30px;
+  position: relative;
+}
+
+.teachers .single-team::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  height: 0;
+  width: 5px;
+  background-color: #0EDC8D;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.teachers .single-team:hover::before {
+  height: 100%;
+}
+
+.teachers .single-team .image {
+  overflow: hidden;
+  padding: 10px 0 10px 10px;
+}
+
+.teachers .single-team .image img {
+  width: 100%;
+  border: 1px solid #eee;
+}
+
+.teachers .single-team .info-head {
+  padding: 35px 40px 35px 20px;
+}
+
+.teachers .single-team .info-head .info-box .designation {
+  font-weight: 600;
+  font-size: 13px;
+  display: block;
+  color: #0EDC8D;
+  margin-bottom: 3px;
+}
+
+.teachers .single-team .info-head .info-box .name {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.teachers .single-team .info-head .info-box .name a {
+  font-weight: 700;
+  font-size: 19px;
+  color: #081828;
+}
+
+.teachers .single-team .info-head .info-box .name a:hover {
+  color: #0EDC8D;
+}
+
+.teachers .single-team .info-head .info-box p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.teachers .single-team .info-head .social {
+  display: block;
+  margin-top: 5px;
+}
+
+.teachers .single-team .info-head .social li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.teachers .single-team .info-head .social li:last-child {
+  margin: 0;
+}
+
+.teachers .single-team .info-head .social li a {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border: 1px solid #eee;
+  color: #081828;
+  border-radius: 50%;
+  font-size: 13px;
+  text-align: center;
+}
+
+.teachers .single-team .info-head .social li a:hover {
+  background-color: #0EDC8D;
+  color: #fff;
+  border-color: transparent;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/* Teacher Details */
+/*-- teacher Details --*/
+.teacher-personal-info {
+  background: #F4F7FA;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.teacher-personal-info .image img {
+  border: 1px solid #eee;
+  width: 100%;
+}
+
+.teacher-personal-info .image .name {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+
+.teacher-personal-info .image .name span {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  color: #777;
+  margin-top: 3px;
+}
+
+.teacher-personal-info .personal-social {
+  padding-left: 20px;
+}
+
+.teacher-personal-info .personal-social p {
+  color: #555;
+}
+
+.teacher-personal-info .personal-social .social {
+  margin-top: 30px;
+}
+
+.teacher-personal-info .personal-social .social li {
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.teacher-personal-info .personal-social .social li:last-child {
+  margin-right: 0;
+}
+
+.teacher-personal-info .personal-social .social li a {
+  color: #081828;
+  font-size: 13px;
+}
+
+.teacher-personal-info .personal-social .social li a:hover {
+  color: #0EDC8D;
+}
+
+.teacher-details-area .teacher-details-left .social li a:hover {
+  color: #fff;
+  background: #0EDC8D;
+  border-color: transparent;
+}
+
+.teacher-details-item .teacher-details-contact h3.first {
+  margin-top: 0;
+}
+
+.teacher-details-item .teacher-details-contact h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #232323;
+  margin-top: 30px;
+}
+
+.teacher-details-item .teacher-details-right .right-contact-inner h3 {
+  color: #081828;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.teacher-details-item .teacher-details-contact h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #081828;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.teacher-details-item .teacher-details-contact p {
+  margin-bottom: 0;
+}
+
+.teacher-details-item .teacher-details-contact ul {
+  margin: 0;
+  padding: 0;
+}
+
+.teacher-details-item .teacher-details-contact ul li {
+  list-style-type: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.teacher-details-item .teacher-details-contact ul li:last-child {
+  margin-bottom: 0;
+}
+
+.list-description {
+  margin-top: 35px;
+}
+
+.list-description li {
+  color: #868686;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.list-description li:last-child {
+  margin-bottom: 0px;
+}
+
+.list-description li i {
+  text-align: center;
+  color: #0EDC8D;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.skill-main h3 {
+  margin-top: 0 !important;
+}
+
+.skill-main {
+  margin-top: 35px;
+}
+
+.skill-main .single-skill {
+  margin-top: 35px;
+}
+
+.skill-main .skill-title h4 {
+  color: #081828;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.skill-main .progress {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #eee;
+  height: 4px;
+  overflow: visible;
+  border-radius: 10px;
+}
+
+.skill-main .progress-bar {
+  position: relative;
+  background: #0EDC8D;
+  border: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.skill-main .progress-bar span {
+  position: absolute;
+  right: 2px;
+  top: -40px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  background: #0EDC8D;
+  height: 30px;
+  width: 35px;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 3px;
+}
+
+.skill-main .progress-bar span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: -6px;
+  border: 4px solid #0EDC8D;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.teacher-contact-form {
+  margin-top: 60px;
+}
+
+.teacher-contact-form h3 {
+  color: #081828;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.teacher-contact-form form .form-group {
+  margin-bottom: 20px;
+}
+
+.teacher-contact-form form .form-group input {
+  width: 100%;
+  min-height: 50px;
+  padding: 3px 20px;
+  color: #081828;
+  border: 1px solid #f5f5f5;
+  border-radius: 0;
+  outline: 0;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+}
+
+.teacher-contact-form form .form-group textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+  color: #081828;
+  border: 1px solid #f5f5f5;
+  border-radius: 0;
+  outline: 0;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+}
