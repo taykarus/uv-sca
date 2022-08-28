@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'aplic',
     'bootstrap4',
+    'chartjs',
 ]
 
 MIDDLEWARE = [
