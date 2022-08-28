@@ -23,7 +23,7 @@
                                 <img src="{{ curso.imagem.thumb.url }}" alt="{{ curso.nome }}"></a>
                             </div>
                             <div class="content">
-                                <h3><a href="#"></a>{{ curso.nome }}</h3>
+                                <h3><a href="{% url 'curso-detail' curso.pk %}">{{ curso.nome }}</a></h3>
                                 <p class="price">{{ curso.descricao }}</p>
                             </div>
                             <div class="bottom-content">
