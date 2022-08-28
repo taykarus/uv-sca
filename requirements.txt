@@ -5,6 +5,7 @@ botocore==1.27.61
 dj-database-url==0.5.0
 Django==2.2.19
 django-bootstrap4==2.3.1
+django-chartjs==2.2.1
 django-stdimage==6.0.1
 django-storages==1.12.3
 gunicorn==20.1.0
