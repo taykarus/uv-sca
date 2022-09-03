@@ -1,6 +1,11 @@
-from django.views.generic import TemplateView, ListView
 from chartjs.views.lines import BaseLineChartView
-from .models import Professor, Curso, Disciplina
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+from django.views.generic import TemplateView, ListView
+from django_weasyprint import WeasyTemplateView
+from weasyprint import HTML
+
+from .models import Professor, Curso, Disciplina, Aluno
 
 
 class IndexView(TemplateView):
@@ -69,3 +74,14 @@ class AlunosChartView(BaseLineChartView):
             dados.append(int(linha.total))
         resultado.append(dados)
         return resultado
+
+
+class RelatorioAlunosView(WeasyTemplateView):
+
+    def get(self, request, *args, **kwargs):
+        alunos = Aluno.objects.order_by('nome').all()
+        html_string = render_to_string('relatorio-alunos.html', {'alunos': alunos})
+        html = HTML(string=html_string, base_url=request.build_absolute_uri()).write_pdf()
+        response = HttpResponse(html, content_type='application/pdf')
+        response['Content-Disposition'] = 'inline; filename="relatorio-alunos.pdf"'
+        return response
