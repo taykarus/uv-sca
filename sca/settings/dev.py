@@ -33,3 +33,7 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', default=5432),
     }
 }
+
+
+# Email teste console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
