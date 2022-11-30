@@ -27,8 +27,15 @@ class CursoSerializer(serializers.ModelSerializer):
             'disciplinas',
         )
 
+    @staticmethod
+    def validate_carga_horaria(valor):
+        if valor >= 20:
+            return valor
+        raise serializers.ValidationError('Carga Horária inválida')
+
 
 class AlunoSerializer(serializers.ModelSerializer):
+    primeiro_nome = serializers.SerializerMethodField('get_primeiro_nome')
 
     class Meta:
         model = Aluno
@@ -38,8 +45,13 @@ class AlunoSerializer(serializers.ModelSerializer):
             'data_nascimento',
             'email',
             'nome',
-            'curso'
+            'curso',
+            'primeiro_nome',
         )
+
+    @staticmethod
+    def get_primeiro_nome(obj):
+        return str(obj.nome).split()[0]
 
 
 class ProfessorSerializer(serializers.ModelSerializer):
