@@ -12,7 +12,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from weasyprint import HTML
 
-from aplic.serializers import CursoSerializer, AlunoSerializer
+from aplic.serializers import CursoSerializer, AlunoSerializer, DisciplinaSerializer
 from .forms import ContatoForm
 from .models import Professor, Curso, Disciplina, Aluno
 
@@ -132,3 +132,8 @@ class CursoViewSet(viewsets.ModelViewSet):
 class AlunoViewSet(viewsets.ModelViewSet):
     queryset = Aluno.objects.all()
     serializer_class = AlunoSerializer
+
+
+class DisciplinaViewSet(viewsets.ModelViewSet):
+    queryset = Disciplina.objects.all()
+    serializer_class = DisciplinaSerializer
