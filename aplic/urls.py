@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.routers import SimpleRouter
 
-from .views import CursoViewSet, AlunoViewSet
+from .views import CursoViewSet, AlunoViewSet, DisciplinaViewSet
 from .views import IndexView, AboutView, ProfessorListView, CursoDetailView, AlunosChartView, RelatorioAlunosView, \
     ContatoView
 
@@ -18,3 +18,4 @@ urlpatterns = [
 router = SimpleRouter()
 router.register('cursos', CursoViewSet)
 router.register('alunos', AlunoViewSet)
+router.register('disciplinas', DisciplinaViewSet)

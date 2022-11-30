@@ -72,7 +72,7 @@ class Aluno(Pessoa):
 
 
 class Disciplina(models.Model):
-    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE, related_name='disciplinas')
     nome = models.CharField(_('Nome'), max_length=100)
     carga_horaria = models.IntegerField(_('Carga horária'))
     obrigatoria = models.BooleanField(_('Obrigatória'), default=True)

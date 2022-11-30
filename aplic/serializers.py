@@ -1,8 +1,21 @@
 from rest_framework import serializers
-from aplic.models import Curso, Aluno
+from aplic.models import Curso, Aluno, Disciplina
+
+
+class DisciplinaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Disciplina
+        fields = (
+            'id',
+            'nome',
+            'curso'
+        )
 
 
 class CursoSerializer(serializers.ModelSerializer):
+    disciplinas = DisciplinaSerializer(many=True, read_only=True)
+
     class Meta:
         model = Curso
         fields = (
@@ -10,7 +23,8 @@ class CursoSerializer(serializers.ModelSerializer):
             'nome',
             'descricao',
             'imagem',
-            'carga_horaria'
+            'carga_horaria',
+            'disciplinas',
         )
 
 
