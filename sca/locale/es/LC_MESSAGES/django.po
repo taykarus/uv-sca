@@ -3,170 +3,170 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-17 11:23-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-11-30 05:54-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2\n"
 
 #: .\aplic\models.py:15 .\aplic\models.py:30 .\aplic\models.py:76
 msgid "Nome"
-msgstr ""
+msgstr "Nombre"
 
 #: .\aplic\models.py:16
 msgid "Descrição"
-msgstr ""
+msgstr "Descripción"
 
 #: .\aplic\models.py:17
 msgid "Imagem"
-msgstr ""
+msgstr "Imagen"
 
 #: .\aplic\models.py:19
 msgid "Carga Horária"
-msgstr ""
+msgstr "Carga horaria"
 
 #: .\aplic\models.py:22
 msgid "Curso"
-msgstr ""
+msgstr "Curso"
 
 #: .\aplic\models.py:23
 msgid "Cursos"
-msgstr ""
+msgstr "Cursos"
 
 #: .\aplic\models.py:31
 msgid "Foto"
-msgstr ""
+msgstr "Fotografía"
 
 #: .\aplic\models.py:33
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: .\aplic\models.py:34
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: .\aplic\models.py:35
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: .\aplic\models.py:36
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: .\aplic\models.py:40
 msgid "Pessoa"
-msgstr ""
+msgstr "Persona"
 
 #: .\aplic\models.py:41
 msgid "Pessoas"
-msgstr ""
+msgstr "Persona"
 
 #: .\aplic\models.py:49
 msgid "Doutorado"
-msgstr ""
+msgstr "Doctorado"
 
 #: .\aplic\models.py:50
 msgid "Mestrado"
-msgstr ""
+msgstr "Mestrado"
 
 #: .\aplic\models.py:51
 msgid "Especialização"
-msgstr ""
+msgstr "Especialización"
 
 #: .\aplic\models.py:52
 msgid "Graduação"
-msgstr ""
+msgstr "Graduación"
 
 #: .\aplic\models.py:54
 msgid "Titulação"
-msgstr ""
+msgstr "Valoración"
 
 #: .\aplic\models.py:55
 msgid "Currículo"
-msgstr ""
+msgstr "Reanudar"
 
 #: .\aplic\models.py:59
 msgid "Professor"
-msgstr ""
+msgstr "Maestro"
 
 #: .\aplic\models.py:60
 msgid "Professores"
-msgstr ""
+msgstr "Maestros"
 
 #: .\aplic\models.py:64
 msgid "Matrícula"
-msgstr ""
+msgstr "Registro"
 
 #: .\aplic\models.py:65
 msgid "Data de Nascimento"
-msgstr ""
+msgstr "Fecha de nacimiento"
 
 #: .\aplic\models.py:66
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: .\aplic\models.py:70
 msgid "Aluno"
-msgstr ""
+msgstr "Alumno"
 
 #: .\aplic\models.py:71
 msgid "Alunos"
-msgstr ""
+msgstr "Estudiantes"
 
 #: .\aplic\models.py:77
 msgid "Carga horária"
-msgstr ""
+msgstr "Carga horaria"
 
 #: .\aplic\models.py:78
 msgid "Obrigatória"
-msgstr ""
+msgstr "Obligatorio"
 
 #: .\aplic\models.py:79
 msgid "Ementa"
-msgstr ""
+msgstr "Menú"
 
 #: .\aplic\models.py:80
 msgid "Bibliografia"
-msgstr ""
+msgstr "Bibliografía"
 
 #: .\aplic\models.py:83
 msgid "Disciplina"
-msgstr ""
+msgstr "Tema"
 
 #: .\aplic\models.py:84
 msgid "Disciplinas"
-msgstr ""
+msgstr "Asignaturas"
 
 #: .\aplic\models.py:91
 msgid "Ano"
-msgstr ""
+msgstr "Año"
 
 #: .\aplic\models.py:92
 msgid "Semestre"
-msgstr ""
+msgstr "Semestre"
 
 #: .\aplic\models.py:93 .\aplic\models.py:99
 msgid "Turma"
-msgstr ""
+msgstr "Clase"
 
 #: .\aplic\models.py:100
 msgid "Turmas"
-msgstr ""
+msgstr "Clases"
 
 #: .\venv\Lib\site-packages\bootstrap4\components.py:17
 #: .\venv\Lib\site-packages\bootstrap4\templates\bootstrap4\form_errors.html:3
 #: .\venv\Lib\site-packages\bootstrap4\templates\bootstrap4\messages.html:4
 msgid "close"
-msgstr ""
+msgstr "cerca"
 
 #: .\venv\Lib\site-packages\click\_termui_impl.py:496
 #, python-brace-format
@@ -410,7 +410,7 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\click\types.py:813
 msgid "directory"
-msgstr ""
+msgstr "directorio"
 
 #: .\venv\Lib\site-packages\click\types.py:815
 msgid "path"
@@ -422,12 +422,12 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\click\types.py:870
 msgid "{name} {filename!r} is a file."
-msgstr ""
+msgstr "{name} {filename!r} es un archivo."
 
 #: .\venv\Lib\site-packages\click\types.py:878
 #, python-brace-format
 msgid "{name} '{filename}' is a directory."
-msgstr ""
+msgstr "{name} '{filename}' es un directorio."
 
 #: .\venv\Lib\site-packages\click\types.py:887
 msgid "{name} {filename!r} is not readable."
@@ -853,12 +853,12 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1057
 #, python-format
 msgid "%(from)s-%(to)s relationship"
-msgstr ""
+msgstr "%(from)s-%(to)s relación"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1058
 #, python-format
 msgid "%(from)s-%(to)s relationships"
-msgstr ""
+msgstr "%(from)s-%(to)s relaciones"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1100
 msgid "Many-to-many relationship"
@@ -1067,29 +1067,29 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:836
-#, python-format
+#, fuzzy, python-format
 msgid "%s KB"
-msgstr ""
+msgstr "Índice de %(directory)s"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:838
-#, python-format
+#, fuzzy, python-format
 msgid "%s MB"
-msgstr ""
+msgstr "Índice de %(directory)s"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:840
-#, python-format
+#, fuzzy, python-format
 msgid "%s GB"
-msgstr ""
+msgstr "Índice de %(directory)s"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:842
-#, python-format
+#, fuzzy, python-format
 msgid "%s TB"
-msgstr ""
+msgstr "Índice de %(directory)s"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:844
-#, python-format
+#, fuzzy, python-format
 msgid "%s PB"
-msgstr ""
+msgstr "Índice de %(directory)s"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:62
 msgid "p.m."
@@ -1392,10 +1392,10 @@ msgid "This is not a valid IPv6 address."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\text.py:67
-#, python-format
+#, fuzzy, python-format
 msgctxt "String to return when truncating text"
 msgid "%(truncated_text)s…"
-msgstr ""
+msgstr "Índice de %(directory)s"
 
 #: .\venv\Lib\site-packages\django\utils\text.py:233
 msgid "or"
@@ -1573,7 +1573,7 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\static.py:80
 #, python-format
 msgid "Index of %(directory)s"
-msgstr ""
+msgstr "Índice de %(directory)s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:6
 msgid "Django: the Web framework for perfectionists with deadlines."
