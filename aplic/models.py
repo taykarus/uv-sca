@@ -39,6 +39,7 @@ class Pessoa(models.Model):
         abstract = True
         verbose_name = _('Pessoa')
         verbose_name_plural = _('Pessoas')
+        ordering = ['id']
 
     def __str__(self):
         return self.nome
