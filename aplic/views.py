@@ -7,8 +7,10 @@ from django.utils import translation
 from django.views.generic import ListView
 from django.views.generic import TemplateView, FormView
 from django_weasyprint import WeasyTemplateView
+from rest_framework import viewsets
 from weasyprint import HTML
 
+from aplic.serializers import CursoSerializer
 from .forms import ContatoForm
 from .models import Professor, Curso, Disciplina, Aluno
 
@@ -112,3 +114,8 @@ class ContatoView(FormView):
     def form_invalid(self, form, *args, **kwargs):
         messages.error(self.request, 'Falha ao enviar e-mail', extra_tags='danger')
         return super(ContatoView, self).form_invalid(form)
+
+
+class CursoViewSet(viewsets.ModelViewSet):
+    queryset = Curso.objects.all()
+    serializer_class = CursoSerializer
