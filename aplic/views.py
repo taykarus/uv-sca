@@ -1,11 +1,15 @@
 from chartjs.views.lines import BaseLineChartView
+from django.contrib import messages
 from django.http import HttpResponse
 from django.template.loader import render_to_string
-from django.views.generic import TemplateView, ListView
+from django.urls import reverse_lazy
+from django.utils import translation
+from django.views.generic import ListView
+from django.views.generic import TemplateView, FormView
 from django_weasyprint import WeasyTemplateView
 from weasyprint import HTML
-from django.utils import translation
 
+from .forms import ContatoForm
 from .models import Professor, Curso, Disciplina, Aluno
 
 
@@ -89,3 +93,22 @@ class RelatorioAlunosView(WeasyTemplateView):
         response = HttpResponse(html, content_type='application/pdf')
         response['Content-Disposition'] = 'inline; filename="relatorio-alunos.pdf"'
         return response
+
+
+class ContatoView(FormView):
+    template_name = 'contato.html'
+    form_class = ContatoForm
+    success_url = reverse_lazy('contato')
+
+    def get_context_data(self, **kwargs):
+        context = super(ContatoView, self).get_context_data(**kwargs)
+        return context
+
+    def form_valid(self, form, *args, **kwargs):
+        form.send_mail()
+        messages.success(self.request, 'E-mail enviado com sucesso', extra_tags='success')
+        return super(ContatoView, self).form_valid(form)
+
+    def form_invalid(self, form, *args, **kwargs):
+        messages.error(self.request, 'Falha ao enviar e-mail', extra_tags='danger')
+        return super(ContatoView, self).form_invalid(form)

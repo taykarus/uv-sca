@@ -28,3 +28,15 @@ DEFAULT_FILE_STORAGE = 'sca.storages.MediaStorage'
 AWS_S3_BUCKET_AUTH = True
 AWS_S3_MAX_AGE_SECONDS = 60 * 60
 AWS_S3_ENCRYPT_KEY = True
+
+
+"""
+# Email produção
+
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'no-reply@fusion.com.br'
+EMAIL_PORT = 587
+EMAIL_USE_TSL = True
+EMAIL_HOST_PASSWORD = 'fusion'
+DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
+"""
