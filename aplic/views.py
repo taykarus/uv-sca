@@ -8,9 +8,11 @@ from django.views.generic import ListView
 from django.views.generic import TemplateView, FormView
 from django_weasyprint import WeasyTemplateView
 from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
 from weasyprint import HTML
 
-from aplic.serializers import CursoSerializer
+from aplic.serializers import CursoSerializer, AlunoSerializer
 from .forms import ContatoForm
 from .models import Professor, Curso, Disciplina, Aluno
 
@@ -119,3 +121,14 @@ class ContatoView(FormView):
 class CursoViewSet(viewsets.ModelViewSet):
     queryset = Curso.objects.all()
     serializer_class = CursoSerializer
+
+    @action(detail=True, methods=['get'])
+    def alunos(self, request, pk=None):
+        alunos = Aluno.objects.filter(curso_id=pk)
+        serializer = AlunoSerializer(alunos, many=True)
+        return Response(serializer.data)
+
+
+class AlunoViewSet(viewsets.ModelViewSet):
+    queryset = Aluno.objects.all()
+    serializer_class = AlunoSerializer
