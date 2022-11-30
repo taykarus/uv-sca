@@ -7,7 +7,7 @@ from django.utils import translation
 from django.views.generic import ListView
 from django.views.generic import TemplateView, FormView
 from django_weasyprint import WeasyTemplateView
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from weasyprint import HTML
@@ -119,6 +119,7 @@ class ContatoView(FormView):
 
 
 class CursoViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.DjangoModelPermissions,)
     queryset = Curso.objects.all()
     serializer_class = CursoSerializer
 
