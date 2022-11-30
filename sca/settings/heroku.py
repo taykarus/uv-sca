@@ -24,3 +24,7 @@ AWS_S3_REGION_NAME = 'sa-east-1'
 
 STATICFILES_STORAGE = 'sca.storages.StaticStorage'
 DEFAULT_FILE_STORAGE = 'sca.storages.MediaStorage'
+
+AWS_S3_BUCKET_AUTH = True
+AWS_S3_MAX_AGE_SECONDS = 60 * 60
+AWS_S3_ENCRYPT_KEY = True

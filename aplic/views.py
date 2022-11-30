@@ -4,6 +4,7 @@ from django.template.loader import render_to_string
 from django.views.generic import TemplateView, ListView
 from django_weasyprint import WeasyTemplateView
 from weasyprint import HTML
+from django.utils import translation
 
 from .models import Professor, Curso, Disciplina, Aluno
 
@@ -13,6 +14,9 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+        lang = translation.get_language()
+        translation.activate(lang)
+        context['lang'] = lang
         context['menu_active_item'] = 'nav-item-home'
         context['cursos'] = Curso.objects.order_by('?').all()
         return context
