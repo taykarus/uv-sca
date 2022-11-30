@@ -12,7 +12,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from weasyprint import HTML
 
-from aplic.serializers import CursoSerializer, AlunoSerializer, DisciplinaSerializer
+from aplic.serializers import CursoSerializer, AlunoSerializer, DisciplinaSerializer, ProfessorSerializer
 from .forms import ContatoForm
 from .models import Professor, Curso, Disciplina, Aluno
 
@@ -128,6 +128,18 @@ class CursoViewSet(viewsets.ModelViewSet):
         serializer = AlunoSerializer(alunos, many=True)
         return Response(serializer.data)
 
+    @action(detail=True, methods=['get'])
+    def professores(self, request, pk=None):
+        professores = Professor.objects.filter(curso_id=pk)
+        page = self.paginate_queryset(professores)
+
+        if page is not None:
+            serializer = ProfessorSerializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = ProfessorSerializer(professores, many=True)
+        return Response(serializer.data)
+
 
 class AlunoViewSet(viewsets.ModelViewSet):
     queryset = Aluno.objects.all()
@@ -137,3 +149,8 @@ class AlunoViewSet(viewsets.ModelViewSet):
 class DisciplinaViewSet(viewsets.ModelViewSet):
     queryset = Disciplina.objects.all()
     serializer_class = DisciplinaSerializer
+
+
+class ProfessorViewSet(viewsets.ModelViewSet):
+    queryset = Professor.objects.all()
+    serializer_class = ProfessorSerializer

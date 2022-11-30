@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from aplic.models import Curso, Aluno, Disciplina
+from aplic.models import Curso, Aluno, Disciplina, Professor
 
 
 class DisciplinaSerializer(serializers.ModelSerializer):
@@ -38,5 +38,17 @@ class AlunoSerializer(serializers.ModelSerializer):
             'data_nascimento',
             'email',
             'nome',
+            'curso'
+        )
+
+
+class ProfessorSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Professor
+        fields = (
+            'id',
+            'nome',
+            'titulacao',
             'curso'
         )
